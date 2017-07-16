@@ -1,0 +1,8 @@
+<div class="shift" ng-show="visible" ng-click="visible=false" >
+  <div class="shift-content">
+   <ul class="people-count">
+	   <li class="number" ng-repeat="item in list" ng-bind="item.name" ng-click="changeList(item)"></li>
+  </ul>
+ <button ng-click="visible=false">取消</button>
+ </div>
+<div>

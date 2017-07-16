@@ -1,0 +1,14 @@
+<div class="register">
+  <form name="form">
+    <input type="text" placeholder="请输入手机号" class="phone-number" validator="phone" ng-model="user.phone"/><br />
+	<input type="password" placeholder="设置6位密码"  class="password" validator="password" ng-model="user.password"/>
+	<div class="get-code">
+	<input type="text" class="code" placeholder="短信验证码" ng-model="user.code" validator="required"/>
+	<button class="code-btn" ng-click="time?1===1:getCode()" ng-bind="time?time:'获取验证码'" ></button>
+	</div>
+	<div class="button">
+		<button class="login-btn" ui-sref="login">登录</button><br />
+		<button class="register-btn" ui-sref="register" validation-submit="form"  ng-click="submit()">注册</button>
+	</div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="my-wrap">
+  <div ng-if="name">
+	<div class="my">
+	  <img ng-src="{{imageUrl}}">
+	  <p class="name" ng-bind="name"></p>
+	</div>
+	<div class="my-info">
+	  <button ui-sref="post">投递</button>
+	  <button ui-sref="favorite">收藏</button>
+	</div>
+	<button class="loginout-btn" ng-click="loginOut()">退出登录</button>
+  </div>
+  <div ng-hide="name">
+    <button ui-sref="login" class="go-login">去登录</button>
+  </div>
+</div>
+<div app-foot></div>
